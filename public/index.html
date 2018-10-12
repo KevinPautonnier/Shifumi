@@ -31,27 +31,20 @@
   </head>
   <body>
 
-    <nav>
-      <div class="nav-wrapper blue darken-4">
-        <a href="#" class="brand-logo center">Shifumoji</a>
-      </div>
-    </nav>
+    <div class="background">
+    </div>
 
     <main class="container">
-      <div class="row">
-        <div class="col s12">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Your message</span>
-              <p><div id="display">DISPLAY</div></p>
-            </div>
-          </div>
-          Enter your message
-          <input id="message" type="text" class="validate">
-          <button class="waves-effect waves-light btn-large" id="button" type="button" name="button">
-            Submit
-          </button>
-        </div>
+      <svg viewBox="0 0 500 500">
+        <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+        <text width="500">
+          <textPath xlink:href="#curve">
+            Shifumoji
+          </textPath>
+        </text>
+      </svg>
+      <div id="button-background">
+          <button id="button">JOUER</button>
       </div>
     </main>
 
