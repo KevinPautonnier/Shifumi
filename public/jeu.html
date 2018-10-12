@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shifumoji</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Shifumoji">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <!-- Windows -->
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <link rel="icon"
+         type="image/png"
+         href="images/icons/icon-144x144.png">
+  </head>
+  <body>
+
+    <main class="container">
+        <div class="row">
+            <div>
+                <button type="button" id="myBtn" style="width: 100%">
+                    <img src="images\pierre.png">
+                </button>
+            </div>
+
+            <div>
+                <button type="button" id="myBtn" style="width: 100%">
+                    <img src="images\papier.png">
+                </button>
+            
+            </div>
+            
+            <div>
+                <button type="button" id="myBtn" style="width: 100%">
+                    <img src="images\ciseaux.png">
+                </button>
+            </div>
+
+            <!-- Image de la main de l'adversaire-->
+            <img src="">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="winlose">Some text in the Modal..</p>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="scripts/app.js"></script>
+  </body>
+</html>
