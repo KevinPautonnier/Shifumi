@@ -25,15 +25,58 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 
+// Get the modal text
+var modalText = document.getElementById('winlose');
+
+// Get the img of the bot
+var botImg = document.getElementById('bot-img');
+
 // Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
+var btns = document.getElementsByClassName("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+var playerChoice;
+var botChoice;
+
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
+for(var i = 0; i < btns.length; i++)
+{
+    btns.item(i).onclick = function() {
+        playerChoice = this.value;
+        //console.log(playerChoice);
+
+        botChoice = Math.floor(Math.random() * Math.floor(3))+1;
+
+        switch(botChoice) {
+            case 1:
+                botImg.src = 'images/pierre.png'
+                break;
+            case 2:
+                botImg.src = 'images/papier.png'
+                break;
+            case 3:
+                botImg.src = 'images/ciseaux.png'
+                break;
+            default:
+        }
+
+        //egalité
+        if (playerChoice == botChoice){
+            modalText.innerHTML = "Egalité !"
+        }
+        //gagné
+        else if(botChoice+1 == playerChoice || (playerChoice == 1 && botChoice == 3)){
+            modalText.innerHTML = "Gagné ! !"
+        }
+        //perdu
+        else{
+            modalText.innerHTML = "Perdu !"
+        }
+        
+        modal.style.display = "flex";
+    }
 }
 
 // When the user clicks on <span> (x), close the modal
