@@ -1,7 +1,70 @@
+@font-face {
+  font-family: 'TitleFont';
+  src: url('../fonts/Shoescenter.ttf');
+}
+
 .card {
   margin: 15px;
 }
 
+.background {
+  background-image: url('../images/emoji-wallpaper.jpg');
+  height: 100vh;
+  width: 100vw;
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#button{
+  border: none;
+  width: 37vw;
+  height: 21vw;
+  border-radius: 11px;
+  background-color: #2196F3;
+  position: relative;
+  font-size: 37px;
+  color: white;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+#button-background{
+  width: 54vw;
+  height: 54vw;
+  background-color: rgba(96, 125, 139, 0.7);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+h1{
+  font-family: 'TitleFont';
+}
+
+path {
+  fill: transparent;
+}
+
+text {
+  font-family: 'TitleFont';
+  font-size: 84px;
+  letter-spacing: -10px;
+}
+
+svg{
+  padding-top: 23px;
 }
