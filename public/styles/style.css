@@ -23,6 +23,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -32,9 +33,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: rgba(254, 254, 254, 0.9);
     margin: auto;
-    padding: 20px;
+    padding: 20px 20px 68px 20px;
     border: 1px solid #888;
     width: 80%;
 }
@@ -52,29 +53,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
-
-#button{
-  border: none;
-  width: 37vw;
-  height: 21vw;
-  border-radius: 11px;
-  background-color: #2196F3;
-  position: relative;
-  font-size: 37px;
-  color: white;
-  filter: drop-shadow(5px 5px 10px black);
-}
-
-#button-background{
-  width: 54vw;
-  height: 54vw;
-  background-color: rgba(96, 125, 139, 0.7);
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
 }
 
 h1{
@@ -134,13 +112,34 @@ svg{
 }
 
 #bot-choice{
+  display: flex;
+  justify-content: center;
+  text-align: center;
   width: 100vw;
   height: 50vh;
+}
+
+#bot-choice>img{
+  height: 28vw;
+  margin-top: 15vh;
 }
 
 .myBtn>img{
   width: 28vw;
 }
+
+.myBtn{
+  border: none;
+  background: none;
+}
+
+.myBtn:active{
+  background-color: #2196F3;
+}
+.myBtn:focus{
+  background-color: #2196F3;
+}
+
 
 #myModal{
   display: none;
@@ -150,4 +149,57 @@ svg{
   padding: 0;
   margin: 0;
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#button{
+  border: none;
+  width: 156px;
+  height: 87px;
+  border-radius: 11px;
+  background-color: #2196F3;
+  position: relative;
+  font-size: 37px;
+  color: white;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+#button-background{
+  width: 240px;
+  height: 240px;
+  background-color: rgba(96, 125, 139, 0.7);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+@media screen and (max-width: 640px) {
+  #button{
+    border: none;
+    width: 37vw;
+    height: 21vw;
+    border-radius: 11px;
+    background-color: #2196F3;
+    position: relative;
+    font-size: 9vw;
+    color: white;
+    filter: drop-shadow(5px 5px 10px black);
+  }
+  
+  #button-background{
+    width: 54vw;
+    height: 54vw;
+    background-color: rgba(96, 125, 139, 0.7);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+}
+
+#winlose{
+  font-size: 58px;
+  font-family: "TitleFont";
 }

@@ -28,6 +28,10 @@ var modal = document.getElementById('myModal');
 // Get the modal text
 var modalText = document.getElementById('winlose');
 
+//Get the modal image
+var modalImg = document.getElementById('modal-img');
+
+
 // Get the img of the bot
 var botImg = document.getElementById('bot-img');
 
@@ -64,29 +68,38 @@ for(var i = 0; i < btns.length; i++)
 
         //egalité
         if (playerChoice == botChoice){
-            modalText.innerHTML = "Egalité !"
+            modalText.innerHTML = "Egalite"
+            modalImg.src = "images/draw.png"
         }
         //gagné
         else if(botChoice+1 == playerChoice || (playerChoice == 1 && botChoice == 3)){
-            modalText.innerHTML = "Gagné ! !"
+            modalText.innerHTML = "Gagne"
+            modalImg.src = "images/trophy.png"
         }
         //perdu
         else{
-            modalText.innerHTML = "Perdu !"
+            modalText.innerHTML = "Perdu"
+            modalImg.src = "images/lose.png"
         }
         
-        modal.style.display = "flex";
+        setTimeout(function() {
+            modal.style.display = "flex";
+        }, 500);
+
     }
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
+    botImg.src = "";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        botImg.src = "";
+        console.log("cocou")
     }
 }
